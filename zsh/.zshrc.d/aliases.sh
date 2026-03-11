@@ -1,4 +1,6 @@
 # aliases
+alias ppm="pythonprojectmanager"
+alias ppm-activate-env="\$(pythonprojectmanager activate-command)"
 alias py="python3"
 alias aur="ssh aur@aur.archlinux.org"
 alias installprogram="yay -S"
