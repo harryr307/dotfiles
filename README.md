@@ -5,21 +5,21 @@
 > 
 > Git (optional)
 
-## How to do full setup
+## How to do full manual setup
 ##### Requirements
 > stow (for installing the dotfiles)
 >
 > Quickshell
 >
-> Hyprland
+> Hyprland, hypridle, hyprlock, hyprshutdown
 >
 > gst-plugin-pipewire (for quickshell to work with audio i/o)
-> 
-> rofi
+>
+> rofi, rofi-emoji
+>
+> wtype, wl-clipboard 9 for rofi-emoji)
 >
 > swww
->
-> hyprlock
 >
 > firefox
 >
