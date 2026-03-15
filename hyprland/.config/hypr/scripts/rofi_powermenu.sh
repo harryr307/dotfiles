@@ -12,6 +12,6 @@ case "$chosen" in
 "Suspend") systemctl suspend
            sleep 2
            hyprlock ;;
-"Logout") hyprctl dispatch exit;;
+"Logout") command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit;;
 "Lock") hyprlock ;;
 esac
