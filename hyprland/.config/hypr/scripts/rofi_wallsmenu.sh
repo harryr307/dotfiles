@@ -7,3 +7,6 @@ if [ chosen == "" ]; then
 fi
 
 ~/.config/hypr/scripts/chbg.sh ~/Pictures/wallpapers/$chosen
+
+# set gtk to dark theme (Yaru-sage-dark)
+gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-sage-dark' 
