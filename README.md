@@ -17,7 +17,7 @@
 >
 > rofi, rofi-emoji
 >
-> wtype, wl-clipboard 9 for rofi-emoji)
+> wtype, wl-clipboard (for clipboard)
 >
 > swww
 >
