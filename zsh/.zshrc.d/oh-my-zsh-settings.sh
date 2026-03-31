@@ -1,4 +1,4 @@
-ZSH_THEME="jreese" # refined
+ZSH_THEME="zhann" # refined
 # Other reccommended themes
 # random - pick random theme from all installed themes
 # gnzh - easy to use
