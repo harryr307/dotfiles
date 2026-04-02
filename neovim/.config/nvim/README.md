@@ -1,20 +1,20 @@
-# kickstart.nvim
+# Next.nvim
 
 ## Introduction
 
-A starting point for Neovim that is:
+A distrobution for Neovim that is:
 
-* Small
-* Single-file
-* Completely Documented
+ * Easy to use
+ * Small
+ * Very customizable
+ * Based off of kickstart.nvim
 
-**NOT** a Neovim distribution, but instead a starting point for your configuration.
 
-## Installation
+## Installation (Only Next.nvim)
 
 ### Install Neovim
 
-Kickstart.nvim targets *only* the latest
+Next.nvim targets *only* the latest
 ['stable'](https://github.com/neovim/neovim/releases/tag/stable) and latest
 ['nightly'](https://github.com/neovim/neovim/releases/tag/nightly) of Neovim.
 If you are experiencing issues, please make sure you have the latest versions.
@@ -38,7 +38,7 @@ External Requirements:
 > See [Install Recipes](#Install-Recipes) for additional Windows and Linux specific notes
 > and quick install snippets
 
-### Install Kickstart
+### Install Next.nvim
 
 > [!NOTE]
 > [Backup](#FAQ) your previous configuration (if any exists)
@@ -51,49 +51,45 @@ Neovim's configurations are located under the following paths, depending on your
 | Windows (cmd)| `%localappdata%\nvim\` |
 | Windows (powershell)| `$env:LOCALAPPDATA\nvim\` |
 
-#### Recommended Step
-
-[Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repo
-so that you have your own copy that you can modify, then install by cloning the
-fork to your machine using one of the commands below, depending on your OS.
-
-> [!NOTE]
-> Your fork's URL will be something like this:
-> `https://github.com/<your_github_username>/kickstart.nvim.git`
-
-You likely want to remove `lazy-lock.json` from your fork's `.gitignore` file
-too - it's ignored in the kickstart repo to make maintenance easier, but it's
-[recommended to track it in version control](https://lazy.folke.io/usage/lockfile).
-
-#### Clone kickstart.nvim
-
-> [!NOTE]
-> If following the recommended step above (i.e., forking the repo), replace
-> `nvim-lua` with `<your_github_username>` in the commands below
+#### Clone Nextdots
 
 <details><summary> Linux and Mac </summary>
 
-```sh
-git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
-```
+> [!NOTE] Stow is required to install properly
 
-</details>
+```sh
+git clone https://github.com/harryr307/dotfiles.git ~/nextdotfiles
+cd ~/nextdotfiles
+rm ~/.config/nvim -rf
+stow neovim --adopt
+```
+<details><summary> Linux (recommended) </summary>
+
+> [!NOTE] This installs all my dotfiles and replaces many configs
+
+#### First, install nextdots-cli:
+##### On Arch:
+Use an AUR helper and install the `nextdots-cli-git` package
+##### Anywhere else:
+Install it manually (requires Git)
+
+```sh
+git clone https://github.com/harryr307/nextdots-cli.git ~/nextdots-cli
+cd ~/nextdots-cli
+sudo ./install
+```
+#### Then install!
+
+> [!NOTE] Stow is also needed for this 
+
+Once the Next.dots cli is installed, run the command `nextdots install`. 
+If that does not work, run the installer directly with `nextdots.installdots`.
+
+Go to the next.dots cli github page for post-installation instructions
 
 <details><summary> Windows </summary>
 
-If you're using `cmd.exe`:
-
-```
-git clone https://github.com/nvim-lua/kickstart.nvim.git "%localappdata%\nvim"
-```
-
-If you're using `powershell.exe`
-
-```
-git clone https://github.com/nvim-lua/kickstart.nvim.git "${env:LOCALAPPDATA}\nvim"
-```
-
-</details>
+> [!NOTE] There is no "official" method to install Next.nvim on a Windows machine
 
 ### Post Installation
 
