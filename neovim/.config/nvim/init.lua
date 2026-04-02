@@ -173,10 +173,16 @@ vim.o.confirm = true
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+-- Open Neotree when pressing <C-t> in normal mode
+vim.keymap.set("n", "<C-t>", "<cmd>Neotree<CR>", { desc = "Open Neotree" })
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
-vim.keymap.set("i", "swm", "<Esc>")
+
+-- Tab switching
+vim.keymap.set("n", "<S-h>", "gT", { desc = "Switch tab to one on the left of current" })
+vim.keymap.set("n", "<S-l>", "gt", { desc = "Switch tab to one on the right of current" })
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
@@ -306,9 +312,22 @@ require("lazy").setup({
   { -- Neotree for file tree
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
+    opts = {
+      window = {
+        mappings = {
+          ["<CR>"] = "open_tabnew",
+          ["<2-LeftMouse>"] = "open_tabnew",
+          ["t"] = "open_tabnew",
+          ["<C-c>"] = "open",
+          ["s"] = "open_split",
+          ["v"] = "open_vsplit",
+        },
+      },
+    },
     dependencies = {
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
+      "3rd/image.nvim",
       "nvim-tree/nvim-web-devicons",
     },
     lazy = false,
