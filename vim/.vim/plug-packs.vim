@@ -7,4 +7,4 @@ Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 colorscheme seoul256
-map <c-t> :vnew<cr>:Tree<cr>
+map <c-t> :tabnew<cr>:Tree<cr>
