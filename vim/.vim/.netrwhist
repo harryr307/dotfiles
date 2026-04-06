@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/harry/Kernel-Plus-Plus/src'
+let g:netrw_dirhist_5='/home/harry/.vim'
+let g:netrw_dirhist_4='/home/harry/.vim/plugged/vim-tree/autoload'
+let g:netrw_dirhist_3='/home/harry/.vim/plugged/vim-tree'
+let g:netrw_dirhist_2='/home/harry/.vim/plugged/vim-tree/plugin'
+let g:netrw_dirhist_1='/home/harry/.vim/plugged/vim-tree'
+let g:netrw_dirhist_0='/home/harry/.vim/plugged'
+let g:netrw_dirhist_9='/home/harry/.vim/plugged/seoul256.vim'
+let g:netrw_dirhist_8='/home/harry/.vim/plugged'
+let g:netrw_dirhist_7='/home/harry/.vim'
