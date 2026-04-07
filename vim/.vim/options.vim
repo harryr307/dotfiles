@@ -1,3 +1,6 @@
+" Show where cursor is
+set cursorline
+
 " Enable syntax highlighting
 syntax on
 
