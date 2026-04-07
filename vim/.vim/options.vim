@@ -12,8 +12,8 @@ set relativenumber
 set ignorecase
 set smartcase
 
-" Sync clipboard
-set clipboard="unnamedplus"
+" Sync clipboard with system
+set clipboard=unnamedplus
 
 " Dont show the mode
 set noshowmode

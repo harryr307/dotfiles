@@ -4,3 +4,5 @@ quickshell/.config/quickshell/*
 
 vim/.vim/plugged
 vim/.vim/.netrwhist
+
+neovim/.config/nvim/lazy-lock.json
