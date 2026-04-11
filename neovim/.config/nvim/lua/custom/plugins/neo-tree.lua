@@ -4,7 +4,7 @@ return { -- Neotree for file tree
   opts = {
     window = {
       mappings = {
-        ["<CR>"] = "open_tabnew",
+        ["<cr>"] = "open_tabnew",
         ["<2-LeftMouse>"] = "open_tabnew",
         ["t"] = "open_tabnew",
         ["<C-c>"] = "open",

@@ -4,5 +4,5 @@ export SHELL='/usr/bin/zsh'
 # make Qt use GTK theme
 export QT_QPA_PLATFORMTHEME='gtk3'
 
-# use nvim as default editor
-export EDITOR='vim'
+# use nnvim as default editor
+export EDITOR='nvim'

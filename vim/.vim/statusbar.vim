@@ -15,17 +15,29 @@ function! StatuslineGit()
 
   let l:branchname = GitBranch()
 
-  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+  return strlen(l:branchname) > 0?' ['.l:branchname.']':''
 
 endfunction
 
-
+let g:mode_names = {
+\ 'n'  : 'NORMAL',
+\ 'i'  : 'INSERT',
+\ 'R'  : 'REPLACE',
+\ 'v'  : 'VISUAL',
+\ 'V'  : 'V-LINE',
+\ "\<C-V>" : 'V-BLOCK',
+\ 'c'  : 'COMMAND',
+\ '!'  : 'SHELL',
+\ 't'  : 'TERMINAL'
+\}
 
 set statusline=
 
 set statusline+=%#PmenuSel#
 
 set statusline+=%{StatuslineGit()}
+
+set statusline+=\ %{get(g:mode_names,mode(),'')}\ 
 
 set statusline+=%#StatusLine#
 
